@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
-  /imcsandeepsharma@oksbi
 <head>
-  <meta charset="UTF-8">
+  <title>Payment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payment Gateways</title>
 </head>
+
 <body>
-<h1>Payment Gateways</h1>
-<ol>
-<li>
-<a href="upi://pay?pa=imcsandeepsharma@oksbi&pn=Swami%20Samarth%20Tours&am=1500&cu=INR">
-  Pay ₹1500 via UPI
-</a>
-</li>
+<h2>Choose Payment Method</h2>
 
+<button onclick="payUPI()">📱 Pay via UPI</button><br><br>
+<button onclick="payRazorpay()">💳 Card / UPI / Wallet</button><br><br>
+<button onclick="payCOD()">💵 Cash on Delivery</button>
 
-</ol>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="payment.js"></script>
 </body>
 </html>
