@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Payment</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Payment</title>
+<style>
+body { font-family: Arial; padding: 15px }
+button { padding: 12px; width: 100%; margin: 8px 0 }
+img { width: 250px; }
+</style>
 </head>
 
 <body>
+
 <h2>Choose Payment Method</h2>
 
-<button onclick="payUPI()">📱 Pay via UPI</button><br><br>
-<button onclick="payRazorpay()">💳 Card / UPI / Wallet</button><br><br>
-<button onclick="payCOD()">💵 Cash on Delivery</button>
+<!-- UPI LINK -->
+<button onclick="payUPI()">📱 Pay via UPI</button>
 
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<!-- QR CODE -->
+<h3>OR Scan QR</h3>
+<img src="upi-qr.png" alt="UPI QR">
+
+<!-- SCREENSHOT UPLOAD -->
+<h3>Upload Payment Screenshot</h3>
+<input type="file" accept="image/*">
+
+<button onclick="confirmWhatsApp()">📩 Confirm via WhatsApp</button>
+
+<!-- COD -->
+<button onclick="cod()">💵 Cash on Pickup</button>
+
 <script src="payment.js"></script>
 </body>
-</html>
+  </html>
