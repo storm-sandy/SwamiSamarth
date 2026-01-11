@@ -1,5 +1,5 @@
 function payUPI() {
-  let upiUrl = "upi://pay?pa=merchant@upi&pn=Swami%20Samarth%20Travels&am=500&cu=INR";
+  let upiUrl = "upi://pay?pa=imcsandeepsharma@oksbi&pn=Swami%20Samarth%20Travels&am=500&cu=INR";
   window.location.href = upiUrl;
 }
 
