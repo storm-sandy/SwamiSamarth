@@ -1,7 +1,13 @@
 function payUPI() {
-  let upi =
-    "upi://pay?pa=imcsandeepsharma@oksbi&pn=Swami%20Samarth%20Travels&am=5&cu=INR";
-  window.location.href = upi;
+ // let upi =
+  //  "upi://pay?pa=imcsandeepsharma@oksbi&pn=Swami%20Samarth%20Travels&am=5&cu=INR";
+  //window.location.href = upi;
+
+intent://pay#Intent;
+scheme=upi;
+package=com.google.android.apps.nbu.paisa.user;
+end
+  
 }
 
 function confirmWhatsApp() {
