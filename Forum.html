@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple JS Forum</title>
+<style>
+  body { font-family: Arial; padding: 10px; }
+  .post { border-bottom: 1px solid #ccc; padding: 8px 0; }
+  .name { font-weight: bold; }
+  .time { font-size: 12px; color: gray; }
+</style>
+</head>
+<body>
+
+<h3>Simple Discussion Forum</h3>
+
+<input id="name" placeholder="Your name"><br><br>
+<textarea id="msg" placeholder="Write your message"></textarea><br><br>
+<button onclick="addPost()">Post</button>
+
+<hr>
+
+<div id="forum"></div>
+
+<script>
+function addPost() {
+  let name = document.getElementById("name").value || "Guest";
+  let msg  = document.getElementById("msg").value;
+
+  if (!msg) return alert("Write a message");
+
+  let post = document.createElement("div");
+  post.className = "post";
+
+  post.innerHTML = `
+    <div class="name">${name}</div>
+    <div>${msg}</div>
+    <div class="time">${new Date().toLocaleString()}</div>
+  `;
+
+  document.getElementById("forum").prepend(post);
+  document.getElementById("msg").value = "";
+}
+</script>
+
+</body>
+</html>
